@@ -44,15 +44,15 @@ class App:
         base_agent = agent.BaseAgent()
         base_agent.set_game(self.game)
         
-        planning = planning_agent.MonteCarloPlanningAgent(200, 3, 240)
+        planning = planning_agent.MonteCarloPlanningAgent(100, 3, 240)
         planning.set_game(self.game)
         
         
         better_agent = agent.BetterAgent()
         better_agent.set_game(self.game)
         
-        neural = neural_network.NeuralAgent("heuristic_weights.h5")
-        neural.set_game(self.game)
+        #neural = neural_network.NeuralAgent("heuristic_weights.h5")
+        #neural.set_game(self.game)
         
         self.update_canvas(self.game.get_state())
         
